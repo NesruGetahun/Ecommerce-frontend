@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(25, 25, 25, 0.877);
+  font-family: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif";
+}
+
+header {
+  background-color: rgb(235, 235, 235);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  overflow: hidden;
+  padding-top: 1.5rem;
+
+  a {
+    font-size: 2rem;
+    transition: all 0.35s ease-out;
+    backface-visibility: hidden;
+    font-weight: 500;
+    color: rgb(14, 2, 52);
+  }
+
+  .logo {
+    a {
+      position: absolute;
+      top: 1rem;
+      width: 4rem;
+      height: 4rem;
+      display: block;
+      box-shadow: 0 0 0.5rem rgba(0, 5, 61, 0.452);
+      overflow: hidden;
+      border-radius: 0.1rem 1rem;
+      transform: rotate(45deg);
+      padding: 0.2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .navs {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .option {
+      position: relative;
+      a {
+        width: 8rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1.5px solid rgba(40, 40, 40, 0.311);
+
+        transition: all 0.45s ease-out;
+        background-image: linear-gradient(
+          45deg,
+          transparent 50%,
+          rgba(28, 1, 96, 0.84) 50%
+        );
+        background-size: 350%;
+        &:hover {
+          background-position: 100%;
+          color: rgb(240, 240, 240);
+        }
+        &:active {
+          opacity: 0.8;
+        }
+      }
+
+      .cart-batch {
+        position: absolute;
+        top: -1rem;
+        right: -1.4rem;
+
+        color: white;
+        background-color: rgb(255, 0, 0);
+        width: 3rem;
+        height: 2em;
+
+        border-radius: 1rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .user {
+      a {
+        border: 1px solid rgb(222, 89, 0);
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        display: block;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &:hover {
+          border: 2px solid rgb(222, 89, 0);
+        }
+      }
+    }
+  }
+
+  .icon {
+    position: relative;
+    top: -.5rem;
+    display: none;
+    p {
+      font-size: 1.6rem;
+      cursor: pointer;
+      border: .1rem solid rgba(51, 51, 51, 0.5);
+      padding: .4rem;
+      border-radius: 5rem;
+      box-shadow: 0 0 .2rem rgb(48, 48, 48);
+      transition: all .3s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:active {
+        transform: scale(1);
+      }
+    }
+
+    
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navigation {
+    .logo {
+      a {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0.2rem;
+        top: .8rem;
+      }
+    }
+
+    ul {
+      flex-direction: column;
+      position: absolute;
+      right: 6rem;
+      top: 1.5rem;
+      border-radius: 0 1rem 0 0;
+      z-index: 9999;
+      background-color: whitesmoke;
+      padding: 2rem 4rem;
+      overflow: hidden;
+      box-shadow:  0 0 .2rem rgba(55, 55, 55, 0.838);
+      border-bottom: .5rem solid rgba(0, 0, 40, 0.705);
+      transition: all .6s ease-out;
+
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .moveIn {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .navs {
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+    }
+
+    .icon {
+      display: block;
+    }
+  }
+}

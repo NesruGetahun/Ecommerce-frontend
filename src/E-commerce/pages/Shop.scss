@@ -1,0 +1,51 @@
+.shop {
+  display: flex;
+  .catagories {
+    width: 15rem;
+    margin-right: 1rem;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2.8rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    box-shadow: 0 0 0.2rem rgba(57, 57, 57, 0.523);
+
+    p {
+      width: 100%;
+      border-bottom: 1px solid rgba(57, 57, 57, 0.523);
+      font-size: 1.5rem;
+      transition: all 0.35s ease-out;
+      font-weight: 500;
+      color: rgb(33, 33, 33);
+      padding: 1rem;
+      transition: all 0.45s ease-out;
+      background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        rgba(21, 3, 66, 0.82) 50%
+      );
+      background-size: 330%;
+      cursor: pointer;
+      &:hover {
+        background-position: 100%;
+        color: #ffffff;
+      }
+      &:active {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .products {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+}

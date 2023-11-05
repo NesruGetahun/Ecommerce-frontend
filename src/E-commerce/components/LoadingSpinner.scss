@@ -1,0 +1,32 @@
+.spinner {
+   width: 100%;
+  .wrapper {
+    //border: 2px solid black;
+    min-height: 50vh;
+    perspective: 100rem;
+    border-radius: 10rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .spin {
+      width: 10rem;
+      height: 10rem;
+      border: 2.5rem solid rgb(19, 0, 86);
+      border-left: 2.5rem solid rgb(198, 198, 198);
+      border-radius: 10rem;
+      animation: spinner .8s ease-out infinite;
+    }
+  }
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
